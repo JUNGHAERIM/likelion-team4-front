@@ -31,7 +31,7 @@ const Profile_Comment = styled.div`
 const Preference = styled.div`
 
 `
-export default function PersonalComment(){
+export default function PersonalComment({name, time, content}){
 
   return(
     <>
@@ -39,11 +39,11 @@ export default function PersonalComment(){
         <Profile_Picture></Profile_Picture>
         <Profile_Text>
           <Profile_Text_Up>
-            <Profile_Text_Name>@병장 2호봉</Profile_Text_Name>
-            <Profile_Text_Time>4개월전</Profile_Text_Time>  
+            <Profile_Text_Name>{name}</Profile_Text_Name>
+            <Profile_Text_Time>{time}</Profile_Text_Time>  
           </Profile_Text_Up>
           <Profile_Comment>
-            이 노래를 통해 군생활을 극복했어요
+            {content}
           </Profile_Comment>
         </Profile_Text>
       </PersonalComment_Wrapper>
